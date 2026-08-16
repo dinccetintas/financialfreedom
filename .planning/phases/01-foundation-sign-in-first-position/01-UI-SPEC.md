@@ -167,6 +167,29 @@ or explicitly disabling dark mode in Phase 1.
 
 ---
 
+## Visual Hierarchy
+
+One focal point per screen — the single element that should draw the eye first. Declared here so
+that screens executed independently do not each invent their own priority. Where the focal point is
+a CTA it takes the accent color per the Color contract; where it is data it takes the heaviest type
+step present on that screen (semibold, one size up from Body) rather than accent color.
+
+| Screen | Focal point | How it is expressed |
+|--------|-------------|---------------------|
+| Sign in | The "Sign in" primary CTA | Accent-filled, full-width button; the only accent element on the screen |
+| Request password reset | The "Send reset link" primary CTA | Accent-filled, full-width; email field sits above it in Body weight 400 |
+| Set new password | The "Set new password" primary CTA | Accent-filled, full-width; password rules render as Label (14/400, muted) and never compete |
+| Portfolio list | The portfolio name on each card | Heading (20/600); value/metadata rows stay Body 400 muted. The "Create portfolio" CTA is accent but sits above the fold as a single button, not repeated per card |
+| Portfolio create | The name input field | Focused-field accent border on mount (autofocus); the CTA is the second-strongest element |
+| Add transaction | The instrument field, then quantity × price as a pair | Instrument autofocuses and carries the accent focus border; quantity and price render in tabular figures at Body 600 while the remaining fields (date, fees, currency) stay Body 400 |
+| Transaction list | The instrument symbol + date row | Instrument symbol Body 600, date Label muted directly beside it — on both the ≥640px table row and the <640px card. Numeric columns are right-aligned tabular figures but are NOT the anchor; no accent color appears on any row |
+
+**Rule that holds across all seven:** exactly one focal point per screen. If a screen appears to
+need two, the second is demoted to Body 600 without accent. Superseded/corrected transaction rows
+(D-17) are rendered muted and are never the focal point, even though they remain visible in history.
+
+---
+
 ## Copywriting Contract
 
 | Element | Copy |
@@ -253,11 +276,11 @@ being added to that phase's UI-SPEC.
 
 ## Checker Sign-Off
 
-- [ ] Dimension 1 Copywriting: PASS
-- [ ] Dimension 2 Visuals: PASS
-- [ ] Dimension 3 Color: PASS
-- [ ] Dimension 4 Typography: PASS
-- [ ] Dimension 5 Spacing: PASS
-- [ ] Dimension 6 Registry Safety: PASS
+- [x] Dimension 1 Copywriting: PASS
+- [x] Dimension 2 Visuals: PASS — initially FLAGged (no focal point declared for any screen); closed by adding the `## Visual Hierarchy` section
+- [x] Dimension 3 Color: PASS
+- [x] Dimension 4 Typography: PASS
+- [x] Dimension 5 Spacing: PASS
+- [x] Dimension 6 Registry Safety: PASS
 
-**Approval:** pending
+**Approval:** approved 2026-08-16 (gsd-ui-checker, 6/6 after FLAG closure)
