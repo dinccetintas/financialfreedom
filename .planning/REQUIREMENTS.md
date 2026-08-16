@@ -212,13 +212,122 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| _All v1 requirements_ | _To be assigned_ | Pending |
+| AUTH-01 | Phase 1 | Pending |
+| AUTH-02 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Pending |
+| AUTH-04 | Phase 1 | Pending |
+| AUTH-05 | Phase 1 | Pending |
+| AUTH-06 | Phase 1 | Pending |
+| AUTH-07 | Phase 1 | Pending |
+| AUTH-08 | Phase 1 | Pending |
+| LEDG-01 | Phase 1 | Pending |
+| LEDG-06 | Phase 1 | Pending |
+| LEDG-07 | Phase 1 | Pending |
+| LEDG-09 | Phase 1 | Pending |
+| LEDG-10 | Phase 1 | Pending |
+| INST-01 | Phase 1 | Pending |
+| INST-03 | Phase 1 | Pending |
+| LEDG-02 | Phase 2 | Pending |
+| LEDG-03 | Phase 2 | Pending |
+| LEDG-04 | Phase 2 | Pending |
+| LEDG-05 | Phase 2 | Pending |
+| LEDG-08 | Phase 2 | Pending |
+| LEDG-11 | Phase 2 | Pending |
+| INST-02 | Phase 2 | Pending |
+| DATA-01 | Phase 3 | Pending |
+| DATA-04 | Phase 3 | Pending |
+| DATA-05 | Phase 3 | Pending |
+| DATA-06 | Phase 3 | Pending |
+| DATA-07 | Phase 3 | Pending |
+| VAL-01 | Phase 3 | Pending |
+| UI-01 | Phase 4 | Pending |
+| UI-02 | Phase 4 | Pending |
+| UI-03 | Phase 4 | Pending |
+| UI-04 | Phase 4 | Pending |
+| UI-06 | Phase 4 | Pending |
+| DES-01 | Phase 4 | Pending |
+| DES-02 | Phase 4 | Pending |
+| DES-03 | Phase 4 | Pending |
+| DATA-02 | Phase 5 | Pending |
+| DATA-03 | Phase 5 | Pending |
+| VAL-02 | Phase 5 | Pending |
+| VAL-03 | Phase 5 | Pending |
+| VAL-04 | Phase 5 | Pending |
+| VAL-05 | Phase 5 | Pending |
+| VAL-10 | Phase 5 | Pending |
+| INST-04 | Phase 5 | Pending |
+| INST-05 | Phase 5 | Pending |
+| INST-06 | Phase 5 | Pending |
+| VAL-06 | Phase 6 | Pending |
+| VAL-07 | Phase 6 | Pending |
+| VAL-08 | Phase 6 | Pending |
+| VAL-09 | Phase 6 | Pending |
+| EXPO-01 | Phase 7 | Pending |
+| EXPO-02 | Phase 7 | Pending |
+| EXPO-03 | Phase 7 | Pending |
+| EXPO-04 | Phase 7 | Pending |
+| EXPO-05 | Phase 7 | Pending |
+| EXPO-06 | Phase 7 | Pending |
+| EXPO-07 | Phase 7 | Pending |
+| EXPO-08 | Phase 7 | Pending |
+| EXPO-09 | Phase 7 | Pending |
+| INST-07 | Phase 7 | Pending |
+| DATA-08 | Phase 7 | Pending |
+| DATA-09 | Phase 7 | Pending |
+| THES-01 | Phase 8 | Pending |
+| THES-02 | Phase 8 | Pending |
+| THES-03 | Phase 8 | Pending |
+| THES-04 | Phase 8 | Pending |
+| THES-05 | Phase 8 | Pending |
+| THES-06 | Phase 8 | Pending |
+| THES-07 | Phase 8 | Pending |
+| THES-11 | Phase 8 | Pending |
+| THES-08 | Phase 9 | Pending |
+| THES-09 | Phase 9 | Pending |
+| THES-10 | Phase 9 | Pending |
+| THES-12 | Phase 9 | Pending |
+| ALERT-01 | Phase 9 | Pending |
+| ALERT-02 | Phase 9 | Pending |
+| ALERT-04 | Phase 9 | Pending |
+| ALERT-05 | Phase 9 | Pending |
+| ALERT-06 | Phase 9 | Pending |
+| UI-05 | Phase 9 | Pending |
+| UI-07 | Phase 9 | Pending |
+| UI-08 | Phase 9 | Pending |
+| AGENT-01 | Phase 11 | Pending |
+| AGENT-02 | Phase 11 | Pending |
+| AGENT-03 | Phase 11 | Pending |
+| AGENT-10 | Phase 11 | Pending |
+| AGENT-13 | Phase 11 | Pending |
+| AGENT-14 | Phase 11 | Pending |
+| AGENT-15 | Phase 11 | Pending |
+| AGENT-08 | Phase 12 | Pending |
+| AGENT-09 | Phase 12 | Pending |
+| AGENT-11 | Phase 12 | Pending |
+| AGENT-12 | Phase 12 | Pending |
+| AGENT-04 | Phase 13 | Pending |
+| AGENT-05 | Phase 13 | Pending |
+| AGENT-06 | Phase 13 | Pending |
+| AGENT-07 | Phase 13 | Pending |
+| NEWS-01 | Phase 10 | Pending |
+| NEWS-02 | Phase 10 | Pending |
+| NEWS-03 | Phase 10 | Pending |
+| NEWS-04 | Phase 10 | Pending |
+| NEWS-05 | Phase 10 | Pending |
+| NEWS-06 | Phase 10 | Pending |
+| NEWS-07 | Phase 10 | Pending |
+| NEWS-08 | Phase 10 | Pending |
+| ALERT-03 | Phase 10 | Pending |
+| DISC-01 | Phase 14 | Pending |
+| DISC-02 | Phase 14 | Pending |
+| DISC-03 | Phase 14 | Pending |
+| DISC-04 | Phase 14 | Pending |
 
 **Coverage:**
-- v1 requirements: 103 total
-- Mapped to phases: 0 (roadmap not yet created)
-- Unmapped: 103 ⚠️
+- v1 requirements: 110 total (corrected — the original 103 count in this section's prior draft did not match the 110 distinct requirement IDs actually listed under "v1 Requirements" above)
+- Mapped to phases: 110 (100%)
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-08-16*
-*Last updated: 2026-08-16 after initialization*
+*Last updated: 2026-08-16 after roadmap creation*
