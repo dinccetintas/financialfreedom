@@ -49,7 +49,8 @@ The accurate USD picture is the foundation and must be correct before anything e
 
 **Staying informed**
 
-- [ ] User sees news filtered to their own holdings, deduplicated and summarized, covering both international sources and Turkish sources including KAP disclosures
+- [ ] User sees news filtered to their own holdings, deduplicated and summarized, covering both international sources and Turkish sources
+- [ ] System ingests BIST company financial statements from KAP filings, parsed into structured fundamentals that power sector tagging and screening
 - [ ] User receives a daily AI-written brief covering only their holdings: what moved, why, and what is coming
 - [ ] User receives real-time alerts for material events: earnings, guidance changes, large price moves, analyst rating changes, rule breaches
 - [ ] Alerts and briefs are delivered to Telegram through a channel-agnostic delivery engine
@@ -63,7 +64,7 @@ The accurate USD picture is the foundation and must be correct before anything e
 - [ ] Agent can execute code against the user's portfolio data to produce charts, scenario analysis and custom calculations on demand
 - [ ] Agent can write to the user's own data (add transactions, create watchlists, set alerts and rules) with every change recorded in an immutable audit log and reversible in one click
 - [ ] Agent answers in the language it is asked in (Turkish or English)
-- [ ] System records per-user agent token usage and cost, visible to the user
+- [ ] System records per-user agent token usage and cost, visible to the user as a spend dashboard (no caps, loop breakers or pre-run estimates — deliberate owner decision)
 
 **Discovery**
 
@@ -87,6 +88,8 @@ The accurate USD picture is the foundation and must be correct before anything e
 - **Tax reporting and capital-gains calculation** — Turkish and US tax treatment differ per instrument and holding period; correctness here is a project of its own
 - **WhatsApp delivery for v1** — requires Meta business verification, per-message templates and per-message cost; Telegram delivers the same value in hours instead of weeks. The delivery engine stays channel-agnostic
 - **Social features** — no sharing feeds, following, or public performance comparison; this is private family financial data
+- **Continuous KAP material-event ingestion (özel durum açıklamaları) in v1** — carries the genuine scraping-frequency and legal-grey-area concern, for materially less value than the periodic statements; thesis invalidation uses price rules plus agent web search until the event feed earns its place
+- **TEFAS fund data** — no official API and no family holdings in Turkish mutual funds today
 - **Automated trade execution or auto-rebalancing** — the system proposes, humans decide
 
 ## Context
@@ -112,7 +115,7 @@ The accurate USD picture is the foundation and must be correct before anything e
 ## Constraints
 
 - **Budget**: Approximately $50–150/month total running cost — Constrains market data provider selection; rules out licensed real-time BIST feeds and premium fundamentals APIs
-- **Data availability**: BIST fundamentals and news are poorly served by international APIs — May require Turkish-specific sources (KAP, TEFAS) or scraping public data; this is the single largest technical risk in the project
+- **Data availability**: BIST fundamentals come from KAP, the regulator's own platform, parsed from published filings — Confirmed obtainable free by hands-on spike (see `.planning/research/SPIKE-KAP.md`); the residual risk is parser maintenance against KAP markup changes, not data sourcing. BIST end-of-day prices still come from a commercial provider and remain unverified until the provider spike
 - **Tech stack**: Next.js on Vercel with Postgres — Owner's preference; Vercel already connected; strong fit for the app, though the returns/risk math may warrant a separate compute path
 - **Users**: Exactly four, closed signup, no public registration — Removes onboarding, billing and compliance surface from v1
 - **Multi-tenancy**: Must be architecturally multi-tenant-ready from day one — "Family now, maybe more later"; proper user isolation with no hardcoded assumptions, but no billing or public onboarding built
@@ -138,6 +141,12 @@ The accurate USD picture is the foundation and must be correct before anything e
 | Multi-tenant-ready without billing or public onboarding | Small cost now avoids a rewrite if the tool ever leaves the family | — Pending |
 | No crypto, no order execution, no tax reporting in v1 | Each is a substantial project; none serves the family's stated need | — Pending |
 | Per-page design prompts as a deliverable instead of direct visual design | Owner drives visual design through Claude Design and needs specifications to feed it | — Pending |
+| FIFO as the v1 cost-basis method | Industry default when no method is elected, matches Turkish convention, simplest to explain; schema stays open to average-cost and specific-lot | — Pending |
+| Split FX sourcing: market rate at transaction time, TCMB EVDS for historical backfill | Most accurate for new entries while using the free, official, authoritative source for the historical bulk. Rate direction convention typed explicitly in the schema, never a bare number | — Pending |
+| Alert sensitivity configurable per family member | Consistent with per-person advice prescriptiveness; lets the owner run hot while the father receives only critical alerts, which is the specific defence against alert fatigue killing adoption | — Pending |
+| KAP financial statements in v1; material-event stream deferred | Spike confirmed statements are free, official and machine-readable, and they unlock fundamentals, sector tagging and BIST screening. The continuous event stream carries the real scraping-frequency and legal-grey-area concern for materially less v1 value | — Pending |
+| Own TypeScript KAP parser rather than depending on pykap | pykap's index calls work but its line-item parser is broken against KAP's Next.js rebuild; the working parts are thin HTTP wrappers, so porting avoids adding a Python service | — Pending |
+| No agent cost controls beyond usage visibility | Owner's explicit decision, reaffirmed after being shown a $10–50 worst-case per pathological deep-research session. No loop breakers, no anomaly alerts, no pre-run estimates — a per-person usage dashboard only | ⚠️ Revisit |
 
 ## Evolution
 
