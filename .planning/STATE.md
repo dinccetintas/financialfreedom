@@ -5,8 +5,8 @@ milestone_name: milestone
 current_phase: 1
 current_phase_name: Foundation — Sign In & First Position
 status: planning
-stopped_at: Phase 1 context gathered
-last_updated: "2026-08-16T08:59:48.207Z"
+stopped_at: Phase 1 UI-SPEC approved
+last_updated: "2026-08-16T09:24:16.964Z"
 last_activity: 2026-08-16
 last_activity_desc: Roadmap created from requirements + research
 progress:
@@ -88,6 +88,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-08-16T08:59:48.194Z
-Stopped at: Phase 1 context gathered
-Resume file: .planning/phases/01-foundation-sign-in-first-position/01-CONTEXT.md
+Last session: 2026-08-16T09:24:16.952Z
+Stopped at: Phase 1 UI-SPEC approved
+Resume file: .planning/phases/01-foundation-sign-in-first-position/01-UI-SPEC.md
