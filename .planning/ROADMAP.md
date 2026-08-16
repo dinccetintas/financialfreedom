@@ -40,7 +40,18 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Editing or removing that transaction produces a new ledger row rather than mutating the original — the original stays visible in history
   4. A direct database-level query using a second family member's session returns zero rows for the first user's portfolio and transactions unless explicitly shared
   5. The instrument behind the transaction is stored keyed by exchange + symbol + ISIN (never a bare ticker), and every stored quantity, price and derived position uses NUMERIC/decimal arithmetic, never a float
-**Plans**: TBD
+**Plans**: 10 plans in 6 waves
+Plans:
+- [ ] 01-01-PLAN.md — Foundation gate: confirm the four [SUS] packages and record the approved package set
+- [ ] 01-02-PLAN.md — Walking Skeleton tracer: migration 001, RLS, sign in, create a portfolio, deployed end to end
+- [ ] 01-03-PLAN.md — Foundation guard suite: RLS fails closed, no float money columns, decimal round-trip, instrument identity
+- [ ] 01-04-PLAN.md — Closed allowlist, emailed password reset, forced first-login password set
+- [ ] 01-05-PLAN.md — Portfolio sharing: grant read, revoke, private by default
+- [ ] 01-06-PLAN.md — Instrument search and add: Finnhub behind a provider seam, OpenFIGI enrichment, manual fallback
+- [ ] 01-07-PLAN.md — One-shot TCMB EVDS USD/TRY backfill script
+- [ ] 01-08-PLAN.md — Record a buy transaction: decimal ledger write, opening lot, derived position
+- [ ] 01-09-PLAN.md — Append-only corrections: void + reissue
+- [ ] 01-10-PLAN.md — Transaction list: filter, sort, netted vs raw ledger
 **UI hint**: yes
 
 ### Phase 2: Full Ledger, All Transaction Types & Fast Bulk Entry
@@ -226,7 +237,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation — Sign In & First Position | 0/TBD | Not started | - |
+| 1. Foundation — Sign In & First Position | 0/10 | Planned | - |
 | 2. Full Ledger, All Transaction Types & Fast Bulk Entry | 0/TBD | Not started | - |
 | 3. Market Data Sync & First Valuation | 0/TBD | Not started | - |
 | 4. Presentation Modes, Localization & Design System | 0/TBD | Not started | - |
