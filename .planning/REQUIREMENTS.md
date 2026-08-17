@@ -9,9 +9,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Authentication & Tenancy
 
-- [ ] **AUTH-01**: User can sign in with email and password
+- [x] **AUTH-01**: User can sign in with email and password
 - [ ] **AUTH-02**: User can reset a forgotten password via an emailed link
-- [ ] **AUTH-03**: User session persists across browser refresh and across devices
+- [x] **AUTH-03**: User session persists across browser refresh and across devices
 - [ ] **AUTH-04**: Signup is closed to a fixed allowlist — no public registration surface exists
 - [ ] **AUTH-05**: Every tenant-scoped table enforces row-level security keyed to the authenticated session, so no query path can return another user's rows
 - [ ] **AUTH-06**: User can create and name multiple portfolios under their own account
@@ -28,7 +28,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **LEDG-06**: Transactions are stored in an append-only ledger — corrections create reversing entries rather than mutating history
 - [ ] **LEDG-07**: Positions are derived from the ledger and can be rebuilt from scratch at any time
 - [ ] **LEDG-08**: User can edit or delete a transaction they entered, with the correction visible in history
-- [ ] **LEDG-09**: All monetary values, FX rates and share quantities use decimal arithmetic end to end — never floating point
+- [x] **LEDG-09**: All monetary values, FX rates and share quantities use decimal arithmetic end to end — never floating point
 - [ ] **LEDG-10**: User can view, filter and sort the full transaction history for a portfolio
 - [ ] **LEDG-11**: User can bulk-enter transactions quickly so one person can set up another family member's portfolio in a single sitting
 
@@ -212,9 +212,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | Phase 1 | Pending |
+| AUTH-01 | Phase 1 | Complete |
 | AUTH-02 | Phase 1 | Pending |
-| AUTH-03 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Complete |
 | AUTH-04 | Phase 1 | Pending |
 | AUTH-05 | Phase 1 | Pending |
 | AUTH-06 | Phase 1 | Pending |
@@ -223,7 +223,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LEDG-01 | Phase 1 | Pending |
 | LEDG-06 | Phase 1 | Pending |
 | LEDG-07 | Phase 1 | Pending |
-| LEDG-09 | Phase 1 | Pending |
+| LEDG-09 | Phase 1 | Complete |
 | LEDG-10 | Phase 1 | Pending |
 | INST-01 | Phase 1 | Pending |
 | INST-03 | Phase 1 | Pending |
@@ -324,6 +324,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DISC-04 | Phase 14 | Pending |
 
 **Coverage:**
+
 - v1 requirements: 110 total (corrected — the original 103 count in this section's prior draft did not match the 110 distinct requirement IDs actually listed under "v1 Requirements" above)
 - Mapped to phases: 110 (100%)
 - Unmapped: 0

@@ -44,11 +44,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. A direct database-level query using a second family member's session returns zero rows for the first user's portfolio and transactions unless explicitly shared
   5. The instrument behind the transaction is stored keyed by exchange + symbol + ISIN (never a bare ticker), and every stored quantity, price and derived position uses NUMERIC/decimal arithmetic, never a float
 
-**Plans**: 10 plans in 6 waves
+**Plans**: 1/10 plans executed in 6 waves
 Plans:
 **Wave 1**
 
-- [ ] 01-01-PLAN.md — Foundation gate: confirm the four [SUS] packages and record the approved package set
+- [x] 01-01-PLAN.md — Foundation gate: confirm the four [SUS] packages and record the approved package set
 
 **Wave 2** *(blocked on Wave 1 completion)*
 
@@ -298,7 +298,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation — Sign In & First Position | 0/10 | Planned | - |
+| 1. Foundation — Sign In & First Position | 1/10 | In Progress|  |
 | 2. Full Ledger, All Transaction Types & Fast Bulk Entry | 0/TBD | Not started | - |
 | 3. Market Data Sync & First Valuation | 0/TBD | Not started | - |
 | 4. Presentation Modes, Localization & Design System | 0/TBD | Not started | - |
