@@ -109,3 +109,10 @@ None - no external service configuration required. This plan only wrote a planni
 ---
 *Phase: 01-foundation-sign-in-first-position*
 *Completed: 2026-08-17*
+
+## Self-Check: PASSED
+
+- FOUND: `.planning/phases/01-foundation-sign-in-first-position/01-DECISIONS.md`
+- FOUND: `.planning/phases/01-foundation-sign-in-first-position/01-01-SUMMARY.md`
+- FOUND commit: `fcd52f8` (Task 2 commit)
+- FOUND commit: `6fad099` (SUMMARY commit)
